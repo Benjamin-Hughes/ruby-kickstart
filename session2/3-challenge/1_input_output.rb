@@ -9,5 +9,12 @@
 
 def sum_difference_product
   # your code goes here
-  
+  numbers = gets.chomp.split(" ")
+  numbers.map! { |item| item.to_i }
+  sum = numbers[0] + numbers[1]
+  difference = numbers[0] - numbers[1]
+
+  product = numbers[0] * numbers[1]
+
+  puts "#{sum}\n#{difference}\n#{product}\n"
 end
