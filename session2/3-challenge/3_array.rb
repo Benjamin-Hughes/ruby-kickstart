@@ -5,8 +5,10 @@
 # "abcdefg".every_other_char  # => "aceg"
 # "".every_other_char         # => ""
 
+
 class String
   def every_other_char
+  	self.chars.select.with_index { |character, index| index.even? }.join
   end
   
 end
