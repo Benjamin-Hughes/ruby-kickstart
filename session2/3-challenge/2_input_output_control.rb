@@ -18,9 +18,19 @@
 # remember you can try your program out with              $ ruby 2_input_output_control.rb
 # and when you think it is correct, you can test it with  $ rake 2:2
 
+def get_input
+	puts "Enter a number"
+end
+
 def hi_hi_goodbye
   # your code here
-
+  get_input
+  while (line = gets) && (line !~ /bye/)
+  	line.to_i.times { print "hi "}
+  	puts
+  	get_input
+  end
+  puts "Goodbye!"
 end
 
 
