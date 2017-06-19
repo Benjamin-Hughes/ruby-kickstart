@@ -9,3 +9,22 @@
 # alternate_words("Can't we all get along?")      # => ["Can't", "all", "along"]
 # alternate_words("Elementary, my dear Watson!")  # => ["Elementary", "dear"]
 
+def alternate_words(string)
+
+	"!@$#%^&*()-=_+[]:;,./<>?\\|".split(//).each do |char|
+    	string = string.gsub(char, " ")
+	end
+	
+	word_array = string.split(" ")
+	count = 1
+
+	ret_array = []
+	word_array.map do |item|
+		if count.odd? == true
+			ret_array << item
+		end
+		count += 1
+	end
+	ret_array
+end
+
